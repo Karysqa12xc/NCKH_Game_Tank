@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MuteAudio : MonoBehaviour
 {
     private bool isMuted;
-    // Start is called before the first frame update
+
 
     private void Start()
     {

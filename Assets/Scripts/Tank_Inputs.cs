@@ -6,11 +6,11 @@ using UnityEngine;
 public class Tank_Inputs : MonoBehaviour
 {
     [Header("Input Properties")]
-    public Camera Cam;
-    private Vector3 crosshairPosition;
+    [SerializeField]private Camera Cam;
+    [SerializeField]private Vector3 crosshairPosition;
     public Vector3 CrosshairPosition
     {
-        get { return crosshairPosition; }
+        get { return crosshairPosition;}
     }
 
     private Vector3 crosshairNormal;
@@ -38,12 +38,6 @@ public class Tank_Inputs : MonoBehaviour
         {
             HandleInputs();
         }
-    }
-
-    private void onDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(crosshairPosition, 0.5f);
     }
     protected virtual void HandleInputs()
     {

@@ -59,7 +59,6 @@ public class Tank_Controller : MonoBehaviour
     {
         if (crossHairTranfrom)
         {
-            crossHairTranfrom.position = new Vector3(1,1,1);
             crossHairTranfrom.position = inputs.CrosshairPosition;
         }
     }

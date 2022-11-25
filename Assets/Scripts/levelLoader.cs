@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class levelLoader : MonoBehaviour
 {
     [SerializeField] private GameObject loadingScene;
+    [SerializeField] private GameObject unActicePanel;
     [SerializeField]private Slider slider;
 
     public void LoadLevel(int sceneIndex)
@@ -17,6 +18,7 @@ public class levelLoader : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         loadingScene.SetActive(true);
+        unActicePanel.SetActive(false);
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress/.9f);

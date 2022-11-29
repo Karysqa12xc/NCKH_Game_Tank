@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HealCharater : MonoBehaviour
 {
-    public int maxHealth;
-    public HealBar healBar;
+    [SerializeField]private int maxHealth;
+    [SerializeField]private HealBar healBar;
     private int curHealth;
     // Start is called before the first frame update
     void Start()

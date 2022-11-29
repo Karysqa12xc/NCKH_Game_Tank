@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HealBar : MonoBehaviour
 {
-    public Image healthbar;
+    [SerializeField]private Image healthbar;
     public void UpdateHealth(float maxHealth , float curentHealth){
         healthbar.fillAmount = curentHealth / maxHealth;
     }

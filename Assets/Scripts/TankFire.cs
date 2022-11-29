@@ -8,12 +8,10 @@ public class TankFire : MonoBehaviour
     public float speedBullet = 10f;
     public Transform FireStart;
     private Transform mCannon;
-    public HealCharater damn;
     // Start is called before the first frame update
     void Start()
     {
         mCannon = FireStart.parent;
-        damn = GetComponent<HealCharater>();
     }
 
     public void Shoot()
@@ -22,8 +20,6 @@ public class TankFire : MonoBehaviour
         rbShell = Instantiate(Shell, FireStart.position, mCannon.rotation);
         rbShell.GetComponent<Rigidbody>().velocity = mCannon.forward * speedBullet;
         Destroy(rbShell, 1f);
-        
-        
     }
 
     public void FixedUpdate()
@@ -31,7 +27,7 @@ public class TankFire : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            damn.TakeDamge(1);
+            
         }
     }
 }

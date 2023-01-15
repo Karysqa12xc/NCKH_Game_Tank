@@ -5,7 +5,7 @@ using UnityEngine;
 public class TankFire : MonoBehaviour
 {
     public GameObject Shell;
-    public float speedBullet = 10f;
+    public float speedBullet = 30f;
     public Transform FireStart;
     private Transform mCannon;
     // Start is called before the first frame update

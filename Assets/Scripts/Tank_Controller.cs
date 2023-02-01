@@ -41,10 +41,9 @@ public class Tank_Controller : MonoBehaviour
     protected virtual void HandleMovement()
     {
         //Move tank forward
-        Vector3 wantedPosition =(transform.forward * inputs.ForwardInput * tankSpeed);
+        Vector3 wantedPosition = (transform.forward * inputs.ForwardInput * tankSpeed);
         // rb.MovePosition(wantedPosition);
         rb.AddForce(wantedPosition);
-
         //Move tank rotation
         Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
         rb.MoveRotation(wantedRotation);

@@ -8,6 +8,7 @@ public class TankFire : MonoBehaviour
     public float speedBullet = 30f;
     public Transform FireStart;
     private Transform mCannon;
+    private moveTutorial isClickQuitBtnTutorial;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,6 @@ public class TankFire : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            
         }
     }
 }

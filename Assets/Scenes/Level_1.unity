@@ -785,6 +785,7 @@ GameObject:
   - component: {fileID: 243865281}
   - component: {fileID: 243865284}
   - component: {fileID: 243865283}
+  - component: {fileID: 243865285}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -857,6 +858,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243865280}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &243865285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243865280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 0.9999999}
+  m_Center: {x: -0.000005600974, y: 0, z: 0.0000038146973}
 --- !u!1001 &247339199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4300,6 +4314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireScript: {fileID: 1357365876}
   fireNoticeTutorial: {fileID: 0}
+  checkPoint_2: {fileID: 0}
+  moveTankBehavior: {fileID: 0}
   quitButtonTutorial: {fileID: 0}
 --- !u!1 &1017788826
 GameObject:
@@ -5989,6 +6005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shell: {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536, type: 3}
+  rbShell: {fileID: 0}
   speedBullet: 30
   FireStart: {fileID: 1865157123}
 --- !u!114 &1357365879
@@ -6047,8 +6064,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireScript: {fileID: 1357365876}
-  fireNoticeTutorial: {fileID: 0}
-  quitButtonTutorial: {fileID: 0}
+  fireNoticeTutorial: {fileID: 1486458718}
+  checkPoint_2: {fileID: 1420674771}
+  moveTankBehavior: {fileID: 1357365871}
+  quitButtonTutorial: {fileID: 86606376}
 --- !u!1 &1361587613
 GameObject:
   m_ObjectHideFlags: 0

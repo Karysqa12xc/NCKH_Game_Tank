@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - CheckPointFireTutorial
   - CheckPoint
+  - Checkpoint_2
   layers:
   - Default
   - TransparentFX

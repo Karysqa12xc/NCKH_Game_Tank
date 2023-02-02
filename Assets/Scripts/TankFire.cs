@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TankFire : MonoBehaviour
 {
-    public GameObject Shell;
+    public GameObject Shell, rbShell;
     public float speedBullet = 30f;
     public Transform FireStart;
     private Transform mCannon;
@@ -16,18 +16,17 @@ public class TankFire : MonoBehaviour
     }
 
     public void Shoot()
-    {
-        GameObject rbShell;
-        rbShell = Instantiate(Shell, FireStart.position, mCannon.rotation);
-        rbShell.GetComponent<Rigidbody>().velocity = mCannon.forward * speedBullet;
+    {  
+        if(Input.GetMouseButtonDown(0))
+        {
+            rbShell = Instantiate(Shell, FireStart.position, mCannon.rotation);
+            rbShell.GetComponent<Rigidbody>().velocity = mCannon.forward * speedBullet;
+        }
         Destroy(rbShell, 1f);
     }
 
     public void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
+        Shoot();
     }
 }

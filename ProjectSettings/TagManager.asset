@@ -9,6 +9,8 @@ TagManager:
   - CheckPointFireTutorial
   - CheckPoint
   - Checkpoint_2
+  - Enemy
+  - EnemyHeal
   layers:
   - Default
   - TransparentFX

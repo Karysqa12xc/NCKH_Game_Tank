@@ -47,8 +47,6 @@ public class Tank_Controller : MonoBehaviour
         //Move tank rotation
         Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
         rb.MoveRotation(wantedRotation);
-        // Vector3 wantedRotation = Vector3.up * inputs.RotationInput * tankRotationSpeed;
-        // rb.AddTorque(wantedRotation);
     }
     protected virtual void HandleTurret()
     {

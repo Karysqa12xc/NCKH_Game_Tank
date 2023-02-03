@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class TankFire : MonoBehaviour
 {
-    public GameObject Shell, rbShell;
-    public float speedBullet = 30f;
+    public GameObject Shell;
+    private GameObject rbShell;
+    public float speedBullet = 10;
     public Transform FireStart;
     private Transform mCannon;
-    private moveTutorial isClickQuitBtnTutorial;
-    // Start is called before the first frame update
     void Start()
     {
         mCannon = FireStart.parent;
     }
 
-    public void Shoot()
+    public void Update()
     {  
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            rbShell = Instantiate(Shell, FireStart.position, mCannon.rotation);
-            rbShell.GetComponent<Rigidbody>().velocity = mCannon.forward * speedBullet;
+            rbShell = Instantiate(Shell, FireStart.position, FireStart.rotation);
+            rbShell.GetComponent<Rigidbody>().velocity = FireStart.forward * speedBullet;
         }
         Destroy(rbShell, 1f);
-    }
-
-    public void FixedUpdate()
-    {
-        Shoot();
     }
 }

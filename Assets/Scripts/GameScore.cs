@@ -6,21 +6,24 @@ using TMPro;
 public class GameScore : MonoBehaviour
 {
     private const int SCORE_OF_RED_TANK = 1;
+    private const int SCORE_OF_YELLOW_TANK = 2;
+    private const int SCORE_OF_GREEN_TANK = 3;
+    private const int SCORE_OF_BIG_RED_TANK = 5;
     private int scoreTotal = 0;
     [SerializeField] private TextMeshProUGUI _score;
-    [SerializeField] private List<HealCharater> checkTankDestroyeds;
-    // Update is called once per frame
-    void Update()
+    public void updateScore(int checkHealth)
     {
-        foreach (var checkTankDestroyed in checkTankDestroyeds)
+        if (checkHealth == 1)
         {
-            if (checkTankDestroyed.isDestroyedEnemies())
-            {
-                var addScore = scoreTotal + SCORE_OF_RED_TANK;
-                Debug.Log(addScore);
-                string scoreSring = string.Format("Score: {0}", addScore);
-                _score.text = scoreSring;
-            }
+            scoreTotal = scoreTotal + SCORE_OF_RED_TANK;
+            string scoreSring = string.Format("Score: {0}", scoreTotal);
+            _score.text = scoreSring;
+        }
+        else if(checkHealth == 2)
+        {
+            scoreTotal = scoreTotal + SCORE_OF_YELLOW_TANK;
+            string scoreSring = string.Format("Score: {0}", scoreTotal);
+            _score.text = scoreSring;
         }
     }
 }

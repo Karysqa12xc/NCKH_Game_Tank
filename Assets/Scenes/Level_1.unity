@@ -792,8 +792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342cab56f095e4a4fb9703078ccf76b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 1
   healBar: {fileID: 1110742422}
+  updateScoreTotal: {fileID: 176434903}
 --- !u!114 &137893479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,16 +962,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176434901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abcfed014cda17040896b5b009d8af3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 863224654}
-  checkTankDestroyeds:
-  - {fileID: 407183199}
-  - {fileID: 1912370504}
-  - {fileID: 137893478}
 --- !u!1 &183756667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
       propertyPath: m_TagString
@@ -2493,8 +2490,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342cab56f095e4a4fb9703078ccf76b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 1
   healBar: {fileID: 1505499723}
+  updateScoreTotal: {fileID: 176434903}
 --- !u!1 &420683069
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
       propertyPath: m_Name
-      value: Enemy (2)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3503318476722469206, guid: dc84a58afe1344547a230a5cb3c072c8, type: 3}
       propertyPath: m_TagString
@@ -4433,7 +4431,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -117.568695, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6814,6 +6812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healBar: {fileID: 1530640993}
+  updateScoreTotal: {fileID: 176434903}
 --- !u!54 &1357365882
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9701,8 +9700,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342cab56f095e4a4fb9703078ccf76b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 2
   healBar: {fileID: 423285266}
+  updateScoreTotal: {fileID: 176434903}
 --- !u!114 &1912370505
 MonoBehaviour:
   m_ObjectHideFlags: 0

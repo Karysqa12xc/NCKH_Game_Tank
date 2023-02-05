@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 public class HealCharater : MonoBehaviour
 {
-    [SerializeField]private int maxHealth;
-    [SerializeField]private HealBar healBar; 
+    [SerializeField] private int maxHealth;
+    [SerializeField] private HealBar healBar;
+    [SerializeField] private GameScore updateScoreTotal;
     private int curHealth;
     void Start()
     {
@@ -16,12 +17,10 @@ public class HealCharater : MonoBehaviour
     {
         curHealth -= dmg;
         healBar.UpdateHealth((float)maxHealth, (float)curHealth);
-        if(curHealth == 0){
+        if (curHealth == 0)
+        {
             Destroy(gameObject);
+            updateScoreTotal.updateScore(maxHealth);   
         }
-    }
-    public bool isDestroyedEnemies(bool check = false){
-        if(curHealth == 0) return check = true;
-        return check;
     }
 }

@@ -7,18 +7,19 @@ public class moveTutorial : MonoBehaviour
 {
     [SerializeField] private GameObject noticeMoveTutorial;
     [SerializeField] private Button quitButtonTutorial;
-    [SerializeField] private Behaviour moveTankBehavior;
+    [SerializeField] private Behaviour moveTankBehavior, reloadAmmo;
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("turnOnMoveTutorial", 1.5f);
+        Invoke("turnOnMoveTutorial", 0.5f);
         quitButtonTutorial.onClick.AddListener(turnOffMoveTutorial);
     }
     public void turnOnMoveTutorial()
     {
         noticeMoveTutorial.SetActive(true);
         moveTankBehavior.enabled = false;
+        reloadAmmo.enabled = false;
     }
     public void turnOffMoveTutorial()
     {

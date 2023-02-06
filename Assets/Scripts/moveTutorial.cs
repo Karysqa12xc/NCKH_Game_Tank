@@ -12,17 +12,19 @@ public class moveTutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("turnOnMoveTutorial", 0.5f);
+        Invoke("turnOnMoveTutorial", 1.5f);
         quitButtonTutorial.onClick.AddListener(turnOffMoveTutorial);
     }
     public void turnOnMoveTutorial()
     {
+        Time.timeScale = 0;
         noticeMoveTutorial.SetActive(true);
         moveTankBehavior.enabled = false;
         reloadAmmo.enabled = false;
     }
     public void turnOffMoveTutorial()
     {
+        Time.timeScale = 1;
         noticeMoveTutorial.SetActive(false);
         moveTankBehavior.enabled = true;
     }

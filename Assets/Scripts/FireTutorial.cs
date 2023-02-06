@@ -19,10 +19,12 @@ public class FireTutorial : MonoBehaviour
         {
             fireNoticeTutorial.SetActive(true);
             moveTankBehavior.enabled = false;
+            Time.timeScale = 0;
         }
     }
     public void turnOffFireTutorial()
     {
+        Time.timeScale = 1;
         fireNoticeTutorial.SetActive(false);
         fireScript.enabled = true;
         moveTankBehavior.enabled = true;

@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTextAmmo: {fileID: 2095516256}
   maxAmmo: 100
-  AmmoInCase: 6
+  maxAmmoInCase: 6
   stopFireOfTank: {fileID: 1357365876}
 --- !u!1 &394851829
 GameObject:

@@ -8,18 +8,24 @@ public class ReloadAmmo : MonoBehaviour
     [SerializeField] private int maxAmmo = 100, AmmoInCase = 6;
     [SerializeField] private Behaviour stopFireOfTank;
 
-    void Update()
+    public void Reload()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        for (int i = AmmoInCase; i > 0;)
         {
-            AmmoInCase--;
-            if(AmmoInCase == 0 || maxAmmo == 0) stopFireOfTank.enabled = false;
-            if(Input.GetKeyDown(KeyCode.R)){
-                maxAmmo = maxAmmo -  AmmoInCase;
-                AmmoInCase = AmmoInCase + (6 - AmmoInCase);
-                if(AmmoInCase == 6) stopFireOfTank.enabled = true;
+            if (i == 0) break;
+            if (Input.GetKeyDown(KeyCode.Mouse0)) i--;
+            if (i == 0 || maxAmmo == 0) stopFireOfTank.enabled = false;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                maxAmmo = maxAmmo - i;
+                i = i + (6 - i);
+                if(i == 6) stopFireOfTank.enabled = true;
             }
         }
 
+    }
+    void Update()
+    {
+        Reload();
     }
 }

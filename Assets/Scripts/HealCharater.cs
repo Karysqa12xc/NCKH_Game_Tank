@@ -17,10 +17,13 @@ public class HealCharater : MonoBehaviour
     {
         curHealth -= dmg;
         healBar.UpdateHealth((float)maxHealth, (float)curHealth);
+    }
+    public void EnemyDie()
+    {
         if (curHealth == 0)
         {
             Destroy(gameObject);
-            updateScoreTotal.updateScore(maxHealth);   
+            updateScoreTotal.updateScore(maxHealth);
         }
     }
 }

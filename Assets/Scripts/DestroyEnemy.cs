@@ -10,6 +10,7 @@ public class DestroyEnemy : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             heal.TakeDamge(1);
+            heal.EnemyDie();
         }
     }
 }

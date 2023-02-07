@@ -1004,7 +1004,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 309.591, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183756669
 MonoBehaviour:
@@ -6914,6 +6914,18 @@ MonoBehaviour:
   reloadBullet: {fileID: 385948681}
   fireScript: {fileID: 1357365876}
   quitButtonTutorial: {fileID: 86606376}
+--- !u!114 &1357365889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357365867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0461b622b7b5c534abccface63e42d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1361587613
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,7 +8290,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 525.5546, y: 207.2413}
+  m_SizeDelta: {x: 635.6943, y: 183.9724}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1650424089
 MonoBehaviour:
@@ -10761,7 +10773,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 340.5623, y: 59.5297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095516256
 MonoBehaviour:
@@ -10783,7 +10795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bullets: 6/6
+  m_text: 'Bullets: 6/100
 
 '
   m_isRightToLeft: 0

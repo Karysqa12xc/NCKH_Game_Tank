@@ -15,7 +15,6 @@ public class ReloadAmmo : MonoBehaviour
             string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
             updateTextAmmo.text = updateBulletInCase;
         }
-
         if (maxAmmoInCase == 0) stopFireOfTank.enabled = false;
         if (Input.GetKeyDown(KeyCode.R) && maxAmmo > 0)
         {
@@ -39,6 +38,7 @@ public class ReloadAmmo : MonoBehaviour
 
             if (maxAmmoInCase <= 6) stopFireOfTank.enabled = true;
         }
+
     }
     void Update()
     {

@@ -8,6 +8,11 @@ public class HealCharater : MonoBehaviour
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
     private int curHealth;
+
+    public int GetHealth()
+    {
+        return maxHealth;
+    }
     void Start()
     {
         curHealth = maxHealth;
@@ -26,4 +31,5 @@ public class HealCharater : MonoBehaviour
             updateScoreTotal.updateScore(maxHealth);
         }
     }
+
 }

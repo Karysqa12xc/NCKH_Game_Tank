@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBullet : MonoBehaviour
+public class DestroyBulletAndItemDrop : MonoBehaviour
 {
     private DropItem Drop;
     private void Start() {

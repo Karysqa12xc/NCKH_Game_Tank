@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropItem : MonoBehaviour
 {
     private List<string> _items = new List<string> { "Bullet", "Bomb", "Heart", "Armor" };
-    [SerializeField]private GameObject[] itemElement;
+    [SerializeField] private GameObject[] itemElement;
     public List<string> GetItems()
     {
         return _items;
@@ -28,23 +28,11 @@ public class DropItem : MonoBehaviour
         getItem.Add(GetBomb[1]);
         return getItem;
     }
-    public void Drop(string itemName)
+    public void Dropitems(string itemName)
     {
-        if(itemName.Equals("Bullet"))
-        {
-            Instantiate(itemElement[0], transform.position, transform.rotation);
-        }
-        if(itemName.Equals("Bomb"))
-        {
-            Instantiate(itemElement[1], transform.position, transform.rotation);
-        }
-        if(itemName.Equals("Heart"))
-        {
-            Instantiate(itemElement[2], transform.position, transform.rotation);
-        }
-        if(itemName.Equals("Armor"))
-        {
-            Instantiate(itemElement[3], transform.position, transform.rotation);
-        }
+        if (itemName.Equals("Bullet")) Instantiate(itemElement[0], transform.position, transform.rotation);
+        if (itemName.Equals("Bomb")) Instantiate(itemElement[1], transform.position, transform.rotation);
+        if (itemName.Equals("Heart")) Instantiate(itemElement[2], transform.position, transform.rotation);
+        if (itemName.Equals("Armor")) Instantiate(itemElement[3], transform.position, transform.rotation);
     }
 }

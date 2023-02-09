@@ -17,9 +17,9 @@ public class FireTutorial : MonoBehaviour
     {
         if(other.gameObject.tag == "Checkpoint_2")
         {
+            Time.timeScale = 0;
             fireNoticeTutorial.SetActive(true);
             moveTankBehavior.enabled = false;
-            Time.timeScale = 0;
         }
     }
     public void turnOffFireTutorial()

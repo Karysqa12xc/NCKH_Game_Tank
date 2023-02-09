@@ -65,6 +65,4 @@ public class Tank_Controller : MonoBehaviour
             crossHairTranfrom.position = inputs.CrosshairPosition;
         }
     }
-
-
 }

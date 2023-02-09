@@ -31,5 +31,9 @@ public class HealCharater : MonoBehaviour
             updateScoreTotal.updateScore(maxHealth);
         }
     }
+    public bool checkEnemiesDie(){
+        if(curHealth == 0) return true;
+        return false;
+    }
 
 }

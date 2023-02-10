@@ -7,15 +7,20 @@ public class HealCharater : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
+    private DropItem Drop;
     private int curHealth;
-
-    public int GetHealth()
+    public int GetMaxHealth()
     {
         return maxHealth;
+    }
+    public int GetcurHealth()
+    {
+        return curHealth;
     }
     void Start()
     {
         curHealth = maxHealth;
+        Drop = GetComponent<DropItem>();
     }
 
     public void TakeDamge(int dmg)
@@ -30,10 +35,14 @@ public class HealCharater : MonoBehaviour
             Destroy(gameObject);
             updateScoreTotal.updateScore(maxHealth);
         }
-    }
-    public bool checkEnemiesDie(){
-        if(curHealth == 0) return true;
-        return false;
-    }
 
+    }
+    public void DropItemWhenEnemiesDie()
+    {
+        if (curHealth == 0 && gameObject.tag == "Checkpoint_2")
+        {
+            var bombdrop = string.Join("", Drop.OnlyGetBomb(Drop.GetItems()));
+            Drop.Dropitems(bombdrop);
+        }
+    }
 }

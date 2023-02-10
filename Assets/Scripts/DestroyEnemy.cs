@@ -11,6 +11,7 @@ public class DestroyEnemy : MonoBehaviour
         {
             heal.TakeDamge(1);
             heal.EnemyDie();
+            heal.DropItemWhenEnemiesDie();
         }
     }
 }

@@ -10,8 +10,6 @@ public class DropItem : MonoBehaviour
     {
         return _items;
     }
-
-
     public List<T> GetRandomItem<T>(List<T> itemInput, int count)
     {
         List<T> itemOutput = new List<T>();

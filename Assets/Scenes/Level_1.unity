@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 86606375}
   - component: {fileID: 86606374}
   m_Layer: 5
-  m_Name: QuitBtn
+  m_Name: QuitBtnOfFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,7 +824,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173626610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -942,7 +942,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183756667}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1225,7 +1225,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243865280}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2975,7 +2975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemElement:
   - {fileID: 8112689006799632591, guid: 49ab7394bf48df74f9a2f51fd9d0c3b6, type: 3}
-  - {fileID: 8314945414142991816, guid: 34d950903576761479d237ecf0151495, type: 3}
+  - {fileID: 7657950835020744296, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
   - {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536, type: 3}
   - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
 --- !u!1 &573695364
@@ -6737,6 +6737,21 @@ MonoBehaviour:
   reloadBullet: {fileID: 385948681}
   fireScript: {fileID: 1357365876}
   quitButtonTutorial: {fileID: 86606376}
+  pickItems: {fileID: 1357365889}
+--- !u!114 &1357365889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357365867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b066d43b0ddd324299acea83689a32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombParameter: {fileID: 183756669}
+  bulletParameter: {fileID: 0}
 --- !u!1 &1361587613
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,7 +6946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemElement:
   - {fileID: 8112689006799632591, guid: 49ab7394bf48df74f9a2f51fd9d0c3b6, type: 3}
-  - {fileID: 8314945414142991816, guid: 34d950903576761479d237ecf0151495, type: 3}
+  - {fileID: 7657950835020744296, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
   - {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536, type: 3}
   - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
 --- !u!1 &1460827606
@@ -8557,7 +8572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemElement:
   - {fileID: 8112689006799632591, guid: 49ab7394bf48df74f9a2f51fd9d0c3b6, type: 3}
-  - {fileID: 8314945414142991816, guid: 34d950903576761479d237ecf0151495, type: 3}
+  - {fileID: 7657950835020744296, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
   - {fileID: 7090710131271465290, guid: 6f4d29cfd8b2b4744bcabc5437eeb536, type: 3}
   - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
 --- !u!1 &1789735315
@@ -9606,7 +9621,7 @@ GameObject:
   - component: {fileID: 1934971979}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

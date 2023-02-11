@@ -8,6 +8,7 @@ public class FireTutorial : MonoBehaviour
     [SerializeField]private GameObject fireNoticeTutorial, checkPoint_2;
     [SerializeField]private Behaviour moveTankBehavior, reloadBullet, fireScript;
     [SerializeField]private Button quitButtonTutorial;
+    [SerializeField]private TakeItems pickItems;
     
     private void Start() 
     {
@@ -20,6 +21,9 @@ public class FireTutorial : MonoBehaviour
             Time.timeScale = 0;
             fireNoticeTutorial.SetActive(true);
             moveTankBehavior.enabled = false;
+        }
+        if(other.gameObject.tag == "Bomb"){
+            pickItems.pickItem(other.gameObject);
         }
     }
     public void turnOffFireTutorial()

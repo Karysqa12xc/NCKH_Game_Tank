@@ -11,6 +11,7 @@ TagManager:
   - Checkpoint_2
   - Enemy
   - EnemyHeal
+  - Bomb
   layers:
   - Default
   - TransparentFX

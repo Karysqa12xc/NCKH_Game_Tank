@@ -11,7 +11,7 @@ public class GameScore : MonoBehaviour
     private const int SCORE_OF_BIG_RED_TANK = 5;
     private int scoreTotal = 0;
     [SerializeField] private TextMeshProUGUI _score;
-    public void updateScore(int checkHealth)
+    public void updateScore(float checkHealth)
     {
         if (checkHealth == 1)
         {

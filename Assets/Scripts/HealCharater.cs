@@ -4,16 +4,16 @@ using UnityEngine;
 using TMPro;
 public class HealCharater : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] private float maxHealth;
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
     private DropItem Drop;
-    private int curHealth;
-    public int GetMaxHealth()
+    private float curHealth;
+    public float GetMaxHealth()
     {
         return maxHealth;
     }
-    public int GetcurHealth()
+    public float GetcurHealth()
     {
         return curHealth;
     }
@@ -23,23 +23,23 @@ public class HealCharater : MonoBehaviour
         Drop = GetComponent<DropItem>();
     }
 
-    public void TakeDamge(int dmg)
+    public void TakeDamge(float dmg)
     {
         curHealth -= dmg;
         healBar.UpdateHealth((float)maxHealth, (float)curHealth);
+        
     }
     public void EnemyDie()
     {
-        if (curHealth == 0)
+        if (curHealth <= 0)
         {
             Destroy(gameObject);
             updateScoreTotal.updateScore(maxHealth);
         }
-
     }
     public void DropItemWhenEnemiesDie()
     {
-        if (curHealth == 0 && gameObject.tag == "Checkpoint_2")
+        if (curHealth <= 0 && gameObject.tag == "Checkpoint_2")
         {
             var bombdrop = string.Join("", Drop.OnlyGetBomb(Drop.GetItems()));
             Drop.Dropitems(bombdrop);

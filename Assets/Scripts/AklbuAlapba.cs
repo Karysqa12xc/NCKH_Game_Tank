@@ -16,14 +16,17 @@ public class AklbuAlapba : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = pointsCount + 1;
     }
-
-
-    void Update()
+    private void DestroyBomb()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            StartCoroutine(Blast());
-        }
+        Destroy(gameObject);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        StartCoroutine(Blast());
+    }
+    private void Update()
+    {
+        Invoke("DestroyBomb", 0.1f);
     }
     private IEnumerator Blast()
     {
@@ -41,14 +44,13 @@ public class AklbuAlapba : MonoBehaviour
         Collider[] hittingObjects = Physics.OverlapSphere(transform.position, currentRadius);
         for (int i = 0; i < hittingObjects.Length; i++)
         {
+            Rigidbody rb = hittingObjects[i].GetComponent<Rigidbody>();
+            HealCharater heal = hittingObjects[i].GetComponent<HealCharater>();
             if (hittingObjects[i].gameObject.tag == "CheckPoint")
             {
-                Rigidbody rb = hittingObjects[i].GetComponent<Rigidbody>();
-                HealCharater heal = hittingObjects[i].GetComponent<HealCharater>();
-                if (!rb && hittingObjects[i].gameObject.tag != "CheckPoint") continue;
                 Vector3 direction = (hittingObjects[i].transform.position - transform.position).normalized;
                 rb.AddForce(direction * force, ForceMode.Impulse);
-                heal.TakeDamge(4);
+                heal.TakeDamge(1);
                 heal.EnemyDie();
                 heal.DropItemWhenEnemiesDie();
             }

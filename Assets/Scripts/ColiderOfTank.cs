@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FireTutorial : MonoBehaviour
+public class ColiderOfTank : MonoBehaviour
 {
     [SerializeField]private GameObject fireNoticeTutorial, checkPoint_2;
     [SerializeField]private Behaviour moveTankBehavior, reloadBullet, fireScript;

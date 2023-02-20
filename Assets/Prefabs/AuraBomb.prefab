@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1938849179312470976}
   - component: {fileID: 1938849179312470979}
   - component: {fileID: 1938849179312470978}
+  - component: {fileID: 3139894964867575893}
   m_Layer: 0
   m_Name: AuraBomb
   m_TagString: Untagged
@@ -54,7 +55,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a839110b4ec86be4dbfdfa9b1d52e714, type: 2}
+  - {fileID: 2100000, guid: f0182f381df6a0a48b146d4022a1c041, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,10 +147,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsCount: 50
-  maxRadius: 4.5
+  maxRadius: 10
   speed: 100
-  startWidth: 5
+  startWidth: 15
   force: 1
+--- !u!65 &3139894964867575893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938849179312470989}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1938849179301792232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +182,10 @@ PrefabInstance:
     - target: {fileID: -7445247940989134531, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
       propertyPath: pointsCount
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811044606200745595, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7446018332676747150, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
       propertyPath: m_RootOrder
@@ -216,6 +234,10 @@ PrefabInstance:
     - target: {fileID: 7657950835020744296, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
       propertyPath: m_Name
       value: BombItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657950835020744296, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6458066885872640170, guid: 71de1f5db84266f44ae16fd4d314c5e4, type: 3}

@@ -5,6 +5,7 @@ using TMPro;
 public class ReloadAmmo : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI updateTextAmmo;
+    [SerializeField] private GameObject reloadTutorial;
     [SerializeField] private int maxAmmo = 100, maxAmmoInCase = 6;
     [SerializeField] private Behaviour stopFireOfTank;
     public void Reload()
@@ -15,9 +16,14 @@ public class ReloadAmmo : MonoBehaviour
             string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
             updateTextAmmo.text = updateBulletInCase;
         }
-        if (maxAmmoInCase == 0) stopFireOfTank.enabled = false;
+        if (maxAmmoInCase == 0) {
+            stopFireOfTank.enabled = false;
+            reloadTutorial.SetActive(true);
+        }
+        
         if (Input.GetKeyDown(KeyCode.R) && maxAmmo > 0)
         {
+            reloadTutorial.SetActive(false);
             if (maxAmmo < 6)
             {
                 if (maxAmmoInCase == 0)

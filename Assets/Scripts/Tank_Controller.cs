@@ -20,6 +20,24 @@ public class Tank_Controller : MonoBehaviour
     // private CharacterController characterController;
     private Tank_Inputs inputs;
     private Vector3 finalTurretLookDir;
+    [Header("Wheel Controller")]
+    [SerializeField] private WheelCollider frontRight;
+    [SerializeField] private WheelCollider frontLeft;
+    [SerializeField] private WheelCollider backRight;
+    [SerializeField] private WheelCollider backLeft;
+
+    [SerializeField] Transform frontRightTransfrom;
+    [SerializeField] Transform frontLeftTransfrom;
+    [SerializeField] Transform backRightTransfrom;
+    [SerializeField] Transform backLeftTransfrom;
+    public float acceleration = 1500f;
+    public float breakingForce = 800f;
+    public float maxTurnAngle = 15f;
+    private float currentAcceleration = 0f;
+    private float currentBreakForce = 0f;
+    private float currentTurnAngel = 0f;
+    
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,13 +58,42 @@ public class Tank_Controller : MonoBehaviour
     }
     protected virtual void HandleMovement()
     {
-        //Move tank forward
-        Vector3 wantedPosition = (transform.forward * inputs.ForwardInput * tankSpeed);
-        // rb.MovePosition(wantedPosition);
-        rb.AddForce(wantedPosition);
-        //Move tank rotation
-        Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
-        rb.MoveRotation(wantedRotation);
+        // //Move tank forward
+        // Vector3 wantedPosition = (transform.forward * inputs.ForwardInput * tankSpeed);
+        // // rb.MovePosition(wantedPosition);
+        // rb.AddForce(wantedPosition);
+        // //Move tank rotation
+        // Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
+        // rb.MoveRotation(wantedRotation);
+        currentAcceleration = acceleration * inputs.ForwardInput;
+        if(Input.GetKey(KeyCode.Space))
+            currentBreakForce = breakingForce;
+        else
+            currentBreakForce = 0f;
+
+        frontRight.motorTorque = currentAcceleration;
+        frontLeft.motorTorque = currentAcceleration;
+
+        frontRight.brakeTorque = currentBreakForce;
+        frontLeft.brakeTorque = currentBreakForce;
+        backRight.brakeTorque = currentBreakForce;
+        backLeft.brakeTorque = currentBreakForce;
+
+        currentTurnAngel = maxTurnAngle * inputs.RotationInput;
+        frontLeft.steerAngle = currentTurnAngel;
+        frontRight.steerAngle = currentTurnAngel;
+
+        updateWheel(frontLeft, frontLeftTransfrom);
+        updateWheel(frontRight, frontRightTransfrom);
+        updateWheel(backLeft, backLeftTransfrom);
+        updateWheel(backRight, backRightTransfrom);
+    }
+    void updateWheel(WheelCollider col, Transform trans){
+        Vector3 position;
+        Quaternion rotation;
+        col.GetWorldPose(out position, out rotation);
+        trans.position = position;
+        trans.rotation = rotation;
     }
     protected virtual void HandleTurret()
     {

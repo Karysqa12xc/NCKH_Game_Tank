@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Tutorials : MonoBehaviour
 {
-    [SerializeField] private GameObject noticeMoveTutorial, noticePlantingTutorial;
+    [SerializeField] private GameObject noticeMoveTutorial, noticePlantingTutorial, stopTank;
     [SerializeField] private Button[] quitButtonTutorial;
     [SerializeField] private Behaviour moveTankBehavior, reloadAmmo, plantingBombScript;
 
@@ -20,6 +20,7 @@ public class Tutorials : MonoBehaviour
         noticeMoveTutorial.SetActive(true);
         moveTankBehavior.enabled = false;
         reloadAmmo.enabled = false;
+        stopTank.SetActive(true);
     }    
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){

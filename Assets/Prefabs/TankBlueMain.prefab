@@ -1,5 +1,191 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &142561360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 142561361}
+  - component: {fileID: 142561362}
+  m_Layer: 0
+  m_Name: BackLeftColider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142561361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142561360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.769, y: -0.165, z: -0.624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7212350568641242872}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!146 &142561362
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142561360}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.46
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
+--- !u!1 &251945842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 251945843}
+  - component: {fileID: 251945844}
+  m_Layer: 0
+  m_Name: 'BackRightColider '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &251945843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251945842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8, y: -0.142, z: -0.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7212350568641242872}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!146 &251945844
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251945842}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.46
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
+--- !u!1 &833486202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833486203}
+  - component: {fileID: 833486204}
+  m_Layer: 0
+  m_Name: 'FrontLeftColider '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833486203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833486202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.686, y: -0.165, z: 0.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7212350568641242872}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!146 &833486204
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833486202}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.46
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
 --- !u!1 &1305305702449896861
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +289,7 @@ GameObject:
   - component: {fileID: 4413237211108756509}
   - component: {fileID: 4413237211108756706}
   - component: {fileID: 4413237211108756711}
+  - component: {fileID: 672221883692107419}
   m_Layer: 0
   m_Name: TankBlueMain
   m_TagString: Player
@@ -187,7 +374,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260161430004088643}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -202,12 +389,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260161430004088643}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2749c26abc6f688488eac5ea3ab21f37, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.22, y: 1.46, z: 2.6642036}
-  m_Center: {x: 0.0000003874302, y: 0.06295732, z: -0.038929284}
+  m_Size: {x: 2.13, y: 1.52, z: 2.6642036}
+  m_Center: {x: 0, y: 0.09, z: 0}
 --- !u!114 &4413237211108756492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,9 +409,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankSpeed: 20
   tankRotationSpeed: 50
-  turretTransfrom: {fileID: 0}
+  turretTransfron: {fileID: 73393757413598458}
   turretLagSpeed: 1
   crossHairTranfrom: {fileID: 0}
+  frontRight: {fileID: 8721850054680380731}
+  frontLeft: {fileID: 833486204}
+  backRight: {fileID: 251945844}
+  backLeft: {fileID: 142561362}
+  frontRightTransfrom: {fileID: 1841796967468529335}
+  frontLeftTransfrom: {fileID: 3483266736493699122}
+  backRightTransfrom: {fileID: 7132374128501472421}
+  backLeftTransfrom: {fileID: 3442068795852274635}
+  acceleration: 1000
+  breakingForce: 800
+  maxTurnAngle: 20
 --- !u!114 &4413237211108756499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +501,7 @@ MonoBehaviour:
   bombParameter: {fileID: 0}
   bulletParameter: {fileID: 0}
   minBomb: 0
-  callParameter: {fileID: 0}
+  callParameter: {fileID: 4413237211108756711}
 --- !u!114 &4413237211108756711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +518,20 @@ MonoBehaviour:
   bombPreabs: {fileID: 1938849179312470989, guid: e5b413478e76fd446ae62c2604a32758, type: 3}
   ActiveBomb: {fileID: 0}
   changeBombParemeter: {fileID: 0}
-  quantityBomb: {fileID: 0}
+  quantityBomb: {fileID: 4413237211108756706}
+--- !u!114 &672221883692107419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260161430004088643}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987c0cb567395b54e87aa31c31237522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getPositionTeleport: {fileID: 0}
 --- !u!1 &3340429690501358811
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826935724981332883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.896, y: -0.165, z: 0.535}
+  m_LocalPosition: {x: -0.837, y: -0.165, z: 0.535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -444,7 +655,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826935724981332883}
   m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.4
+  m_Radius: 0.46
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -777,6 +988,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2436920040613274259}
+  - {fileID: 833486203}
+  - {fileID: 251945843}
+  - {fileID: 142561361}
   m_Father: {fileID: 3777044413893429490}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -30,8 +30,8 @@ public class Tank_Controller : MonoBehaviour
     [SerializeField] Transform frontLeftTransfrom;
     [SerializeField] Transform backRightTransfrom;
     [SerializeField] Transform backLeftTransfrom;
-    public float acceleration = 1500f;
-    public float breakingForce = 800f;
+    public float acceleration = 1000f;
+    public float breakingForce = 600f;
     public float maxTurnAngle = 15f;
     private float currentAcceleration = 0f;
     private float currentBreakForce = 0f;
@@ -66,7 +66,7 @@ public class Tank_Controller : MonoBehaviour
         // Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
         // rb.MoveRotation(wantedRotation);
         currentAcceleration = acceleration * inputs.ForwardInput;
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space)) 
             currentBreakForce = breakingForce;
         else
             currentBreakForce = 0f;

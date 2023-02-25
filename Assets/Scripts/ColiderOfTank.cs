@@ -9,10 +9,11 @@ public class ColiderOfTank : MonoBehaviour
     [SerializeField]private Behaviour moveTankBehavior, reloadBullet, fireScript;
     [SerializeField]private Button quitButtonTutorial;
     [SerializeField]private TakeItems pickItems;
-    
+    [SerializeField] private HealCharater healOfPlayer;
     private void Start() 
     {
         quitButtonTutorial.onClick.AddListener(turnOffFireTutorial);
+        healOfPlayer = GetComponent<HealCharater>();
     }
     private void OnTriggerEnter(Collider other) 
     {

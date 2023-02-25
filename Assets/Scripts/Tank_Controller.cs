@@ -36,16 +36,12 @@ public class Tank_Controller : MonoBehaviour
     private float currentAcceleration = 0f;
     private float currentBreakForce = 0f;
     private float currentTurnAngel = 0f;
-    
-    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         // characterController = GetComponent<CharacterController>();
         inputs = GetComponent<Tank_Inputs>();
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         // 

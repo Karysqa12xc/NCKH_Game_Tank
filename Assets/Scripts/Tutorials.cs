@@ -8,8 +8,6 @@ public class Tutorials : MonoBehaviour
     [SerializeField] private GameObject noticeMoveTutorial, noticePlantingTutorial, stopTank;
     [SerializeField] private Button[] quitButtonTutorial;
     [SerializeField] private Behaviour moveTankBehavior, reloadAmmo, plantingBombScript;
-
-    // Start is called before the first frame update
     void Start()
     {
         Invoke("turnOnMoveTutorial", 1.5f);  

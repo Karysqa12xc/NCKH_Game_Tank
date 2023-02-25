@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyEnemy : MonoBehaviour
 {
     public HealCharater heal;
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other) 
     {
         if (other.gameObject.tag == "Bullet")
         {
@@ -14,4 +14,5 @@ public class DestroyEnemy : MonoBehaviour
             heal.DropItemWhenEnemiesDie();
         }
     }
+    
 }

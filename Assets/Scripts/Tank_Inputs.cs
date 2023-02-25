@@ -29,9 +29,6 @@ public class Tank_Inputs : MonoBehaviour
     {
         get { return rotationInput; }
     }
-
-
-    // Update is called once per frame
     void Update()
     {
         if (Cam)

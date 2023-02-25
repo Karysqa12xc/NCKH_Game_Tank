@@ -46,7 +46,7 @@ public class AklbuAlapba : MonoBehaviour
         {
             Rigidbody rb = hittingObjects[i].GetComponent<Rigidbody>();
             HealCharater heal = hittingObjects[i].GetComponent<HealCharater>();
-            if (hittingObjects[i].gameObject.tag == "CheckPoint")
+            if (hittingObjects[i].gameObject.tag == "CheckPoint" || hittingObjects[i].gameObject.tag == "Enemy")
             {
                 Vector3 direction = (hittingObjects[i].transform.position - transform.position).normalized;
                 rb.AddForce(direction * force, ForceMode.Impulse);

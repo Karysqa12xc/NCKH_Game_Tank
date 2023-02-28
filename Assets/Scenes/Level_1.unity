@@ -3180,12 +3180,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090ac1376b9f9f94588dae19e7eaa21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBullet: 3000
-  howClose: 20
+  _Player: {fileID: 0}
+  speedBullet: 30
+  howClose: 50
   tower: {fileID: 490135959}
-  barrel: {fileID: 1159182215}
+  bulletPreabs: {fileID: 895524587}
   _projectile: {fileID: 751211130178578285, guid: cd276266275cb23419ad138eef824c52, type: 3}
-  fireRate: 1.5
+  fireRate: 1
   nextFire: 0
 --- !u!1 &499421043
 GameObject:
@@ -5253,6 +5254,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887026694}
   m_CullTransparentMesh: 1
+--- !u!1 &895524586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895524587}
+  m_Layer: 0
+  m_Name: FireStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &895524587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895524586}
+  m_LocalRotation: {x: -0, y: 0.07576008, z: -0, w: 0.9971261}
+  m_LocalPosition: {x: -0.111, y: 0.126, z: 0.998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1159182215}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 368.69, z: 0}
 --- !u!1 &898032071
 GameObject:
   m_ObjectHideFlags: 0
@@ -13384,6 +13416,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4413237210382828640, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413237210382828640, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413237210382828641, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 4413237211108756492, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: crossHairTranfrom
       value: 
@@ -13392,6 +13436,10 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 1122153970}
+    - target: {fileID: 4413237211108756499, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4413237211108756500, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: updateScoreTotal
       value: 

@@ -9,11 +9,6 @@ public class TankFire : MonoBehaviour
     public float speedBullet = 10;
     public Transform FireStart;
     private Transform mCannon;
-    void Start()
-    {
-        mCannon = FireStart.parent;
-    }
-
     public void Update()
     {  
         if(Input.GetKeyDown(KeyCode.Mouse0))

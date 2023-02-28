@@ -6,10 +6,11 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
+    [Header("Use Patrol Emeny AI")]
     [SerializeField] private Transform target;
     private NavMeshAgent navMeshAgent;
     public float range;
-    private void Awake()
+    private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
@@ -17,10 +18,7 @@ public class EnemyAi : MonoBehaviour
     private void Update()
     {
         EnemyPatrol();
-        // navMeshAgent.destination = movePositionTransform.position;
     }
-
-
     private void EnemyPatrol()
     {
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance) //done with path

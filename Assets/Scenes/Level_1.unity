@@ -3158,6 +3158,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480548541}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &490135958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8961842173831476273, guid: 12cdf9027b37178408b5b03643275953, type: 3}
+  m_PrefabInstance: {fileID: 5475279184779885748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &490135959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4819240322497481881, guid: 12cdf9027b37178408b5b03643275953, type: 3}
+  m_PrefabInstance: {fileID: 5475279184779885748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &490135962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490135958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090ac1376b9f9f94588dae19e7eaa21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedBullet: 3000
+  howClose: 20
+  tower: {fileID: 490135959}
+  barrel: {fileID: 1159182215}
+  _projectile: {fileID: 751211130178578285, guid: cd276266275cb23419ad138eef824c52, type: 3}
+  fireRate: 1.5
+  nextFire: 0
 --- !u!1 &499421043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,6 +7132,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157441627}
   m_CullTransparentMesh: 1
+--- !u!4 &1159182215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7417075765002231103, guid: 12cdf9027b37178408b5b03643275953, type: 3}
+  m_PrefabInstance: {fileID: 5475279184779885748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1167198812
 GameObject:
   m_ObjectHideFlags: 0
@@ -8030,7 +8064,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4413237209760239203}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c379b076e95a964ba0215ebfe216064, type: 3}
   m_Name: 
@@ -11526,7 +11560,7 @@ GameObject:
   - component: {fileID: 1934971979}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13364,7 +13398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4413237211108756503, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4413237211108756509, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: checkPoint_2
@@ -13455,6 +13489,10 @@ PrefabInstance:
       propertyPath: range
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5475279185336684343, guid: 12cdf9027b37178408b5b03643275953, type: 3}
+      propertyPath: handleTurretEnemy
+      value: 
+      objectReference: {fileID: 490135962}
     - target: {fileID: 5475279185534316985, guid: 12cdf9027b37178408b5b03643275953, type: 3}
       propertyPath: m_Name
       value: EnemyRedReal

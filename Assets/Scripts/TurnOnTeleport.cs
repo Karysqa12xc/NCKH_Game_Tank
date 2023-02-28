@@ -28,6 +28,7 @@ public class TurnOnTeleport : MonoBehaviour
     {
         Time.timeScale = 1;
         howToTeleport.SetActive(false);
+        turnOnTeleUI.SetActive(false);
         moveTankScript.enabled = true;
         fireTankScript.enabled = true;
         PlantingScript.enabled = true;

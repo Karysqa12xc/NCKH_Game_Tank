@@ -8,6 +8,6 @@ public class DestroyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Effect.Play();
-        Destroy(gameObject);
+        if(other.gameObject.tag != "BulletRed") Destroy(gameObject);
     }
 }

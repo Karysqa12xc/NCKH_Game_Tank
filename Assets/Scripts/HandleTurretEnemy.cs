@@ -27,6 +27,7 @@ public class HandleTurretEnemy : MonoBehaviour
         if (dist <= howClose)
         {
             tower.LookAt(_Player);
+            bulletPreabs.LookAt(_Player);
             if(Time.time > nextFire){
                 nextFire = Time.time + 1f / fireRate;
                 ShootOfEnemy();
@@ -37,7 +38,7 @@ public class HandleTurretEnemy : MonoBehaviour
 
     public void ShootOfEnemy()
     {
-        GameObject cloneBulletOfEnemy =  Instantiate(_projectile, bulletPreabs.position, bulletPreabs.rotation);
+        GameObject cloneBulletOfEnemy =  Instantiate(_projectile, bulletPreabs.position, tower.rotation);
         cloneBulletOfEnemy.GetComponent<Rigidbody>().velocity = bulletPreabs.forward * speedBullet;
         Destroy(cloneBulletOfEnemy, 1f);
     }

@@ -26,7 +26,7 @@ public class PlantingBomb : MonoBehaviour
             Instantiate(bombPreabs, positionCrossHair, bombPreabs.transform.rotation);
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         Planting();
     }

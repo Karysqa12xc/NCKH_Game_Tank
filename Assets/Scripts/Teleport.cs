@@ -14,7 +14,7 @@ public class Teleport : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            Invoke("PlayerTeleport", 0.1f);
+            PlayerTeleport();
         }
     }
 

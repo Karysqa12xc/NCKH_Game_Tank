@@ -7,6 +7,7 @@ public class HealCharater : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
+    
     private DropItem Drop;
     private float curHealth;
     public float GetMaxHealth()
@@ -29,12 +30,19 @@ public class HealCharater : MonoBehaviour
         healBar.UpdateHealth((float)maxHealth, (float)curHealth);
         
     }
-    public void EnemyDie()
+    public void DieEnemy()
     {
         if (curHealth <= 0)
         {
             Destroy(gameObject);
             updateScoreTotal.updateScore(maxHealth);
+        }
+    }
+    public void DiePlayer(GameObject turnOnGameOverScrenn){
+        if(curHealth <= 0){
+            turnOnGameOverScrenn.SetActive(true);
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
         }
     }
     public void DropItemWhenEnemiesDie()

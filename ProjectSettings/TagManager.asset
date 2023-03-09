@@ -12,7 +12,8 @@ TagManager:
   - EnemyHeal
   - Bomb
   - Checkpoint_3
-  - BulletRed
+  - Undefined
+  - BulletEnenmy
   layers:
   - Default
   - TransparentFX

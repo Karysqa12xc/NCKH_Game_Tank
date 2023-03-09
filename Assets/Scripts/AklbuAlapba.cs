@@ -51,7 +51,7 @@ public class AklbuAlapba : MonoBehaviour
                 Vector3 direction = (hittingObjects[i].transform.position - transform.position).normalized;
                 rb.AddForce(direction * force, ForceMode.Impulse);
                 heal.TakeDamge(1);
-                heal.EnemyDie();
+                heal.DieEnemy();
                 heal.DropItemWhenEnemiesDie();
             }
         }

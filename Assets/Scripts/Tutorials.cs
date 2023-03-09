@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Tutorials : MonoBehaviour
 {
-    [SerializeField] private GameObject noticeMoveTutorial, noticePlantingTutorial, stopTankDes, pauseDes, plantingUI;
+    [SerializeField] private GameObject noticeMoveTutorial, 
+    noticePlantingTutorial, fireNoticeTutorial, checkPoint_2, stopTankDes, pauseDes, plantingUI;
     [SerializeField] private Button[] quitButtonTutorial;
-    [SerializeField] private Behaviour moveTankBehavior, reloadAmmo, plantingBombScript;
+    [SerializeField] private Behaviour moveTankBehavior, reloadAmmo, fireScript, plantingBombScript;
+    private int countTrigerTutorial = 0;
     void Start()
     {
-        Invoke("turnOnMoveTutorial", 1.5f);  
+        Invoke("turnOnMoveTutorial", 1.5f);
     }
     public void turnOnMoveTutorial()
     {
@@ -20,18 +22,30 @@ public class Tutorials : MonoBehaviour
         reloadAmmo.enabled = false;
         stopTankDes.SetActive(true);
         pauseDes.SetActive(true);
-    }    
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Player"){
-            Time.timeScale = 0; 
+    }
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if(gameObject.tag == "Checkpoint_2")
+        {
+            Time.timeScale = 0;
+            fireNoticeTutorial.SetActive(true);
+            moveTankBehavior.enabled = false;
+            countTrigerTutorial++;
+        }
+        if (other.gameObject.tag == "Player" && countTrigerTutorial == 0)
+        {
+            Time.timeScale = 0;
             noticePlantingTutorial.SetActive(true);
             moveTankBehavior.enabled = false;
             plantingUI.SetActive(true);
             plantingBombScript.enabled = true;
-            reloadAmmo.enabled = false;    
+            reloadAmmo.enabled = false;
         }
+        
     }
-    public void turnOffPlantingTutorial(){
+    public void turnOffPlantingTutorial()
+    {
         Time.timeScale = 1;
         noticePlantingTutorial.SetActive(false);
         moveTankBehavior.enabled = true;
@@ -44,8 +58,19 @@ public class Tutorials : MonoBehaviour
         noticeMoveTutorial.SetActive(false);
         moveTankBehavior.enabled = true;
     }
-    private void Update() {
+     public void turnOffFireTutorial()
+    {
+        Time.timeScale = 1;
+        fireNoticeTutorial.SetActive(false);
+        fireScript.enabled = true;
+        moveTankBehavior.enabled = true;
+        reloadAmmo.enabled = true;
+        Destroy(checkPoint_2);
+    }
+    private void Update()
+    {
         quitButtonTutorial[0].onClick.AddListener(turnOffMoveTutorial);
-        quitButtonTutorial[1].onClick.AddListener(turnOffPlantingTutorial);
+        quitButtonTutorial[1].onClick.AddListener(turnOffFireTutorial);
+        quitButtonTutorial[2].onClick.AddListener(turnOffPlantingTutorial);
     }
 }

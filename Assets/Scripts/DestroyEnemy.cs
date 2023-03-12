@@ -5,6 +5,10 @@ using UnityEngine;
 public class DestroyEnemy : MonoBehaviour
 {
     public HealCharater heal;
+    [SerializeField]private Quest questKillEnemy;
+    private void Start() {
+        questKillEnemy = GameObject.Find("QuestUI").GetComponent<Quest>();
+    }
     private void OnCollisionEnter(Collision other) 
     {
         if (other.gameObject.tag == "Bullet")
@@ -13,6 +17,9 @@ public class DestroyEnemy : MonoBehaviour
             heal.DieEnemy();
             heal.DropItemWhenEnemiesDie();
         }
+    }
+    private void OnDestroy() {
+        if(gameObject.tag == "Enemy") questKillEnemy.countEnemy--;
     }
     
 }

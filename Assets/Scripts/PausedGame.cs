@@ -32,7 +32,10 @@ public class PausedGame : MonoBehaviour
     public void SetTimeScaleOfRestartBtn(){
         Time.timeScale = 1f;
     }
-    public void SetTimeScalexOfHomeBtn(){
+    public void SetTimeScaleOfHomeBtn(){
+        Time.timeScale = 1f;
+    }
+    public void SetTimeScaleOfNextLevel(){
         Time.timeScale = 1f;
     }
 

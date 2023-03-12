@@ -7,9 +7,10 @@ public class HealCharater : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
+    [SerializeField] private Quest checkOneEnemy;
     
     private DropItem Drop;
-    private float curHealth;
+    [SerializeField]private float curHealth;
     public float GetMaxHealth()
     {
         return maxHealth;
@@ -18,17 +19,22 @@ public class HealCharater : MonoBehaviour
     {
         return curHealth;
     }
+    public void GetcurHealthHealing(){
+        curHealth++;
+        healBar.UpdateHealth((float)maxHealth, (float)curHealth);
+    }
+
     void Start()
     {
         curHealth = maxHealth;
         Drop = GetComponent<DropItem>();
+        checkOneEnemy = GameObject.Find("QuestUI").GetComponent<Quest>();
     }
 
     public void TakeDamge(float dmg)
     {
         curHealth -= dmg;
         healBar.UpdateHealth((float)maxHealth, (float)curHealth);
-        
     }
     public void DieEnemy()
     {
@@ -52,5 +58,14 @@ public class HealCharater : MonoBehaviour
             var bombdrop = string.Join("", Drop.OnlyGetBomb(Drop.GetItems()));
             Drop.Dropitems(bombdrop);
         }
+        if(curHealth <=0 && checkOneEnemy.countEnemy == 1){
+            var KeyDrop = string.Join("", Drop.OnlyGetKey(Drop.GetItems()));
+            Drop.Dropitems(KeyDrop);
+        }
+        if(curHealth <= 0 && gameObject.tag == "Enemy"){
+            var itemsDrop = string.Join("", Drop.GetRandomItem(Drop.GetItems(), 1));
+            Drop.Dropitems(itemsDrop);
+        }
+      
     }
 }

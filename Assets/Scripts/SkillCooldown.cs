@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class SkillCooldown : MonoBehaviour
 {
     public Image[] imageCooldown;
@@ -9,6 +10,7 @@ public class SkillCooldown : MonoBehaviour
     public float coolDownTele = 15f, coolDownPlan= 10f;
     bool isCooldownTele, isCoolDownPlan;
     [SerializeField] private TakeItems quantityBomb;
+    [SerializeField] private TextMeshProUGUI changeBombParemeter;
     private void Start() 
     {
         quantityBomb = GameObject.Find("TankBlueMain").GetComponent<TakeItems>();
@@ -17,7 +19,7 @@ public class SkillCooldown : MonoBehaviour
     }
     void Update()
     {
-        Invoke("CoolDownSkill", .5f);
+        Invoke("CoolDownSkill", 0.5f);
     }
 
     private void CoolDownSkill()
@@ -26,14 +28,19 @@ public class SkillCooldown : MonoBehaviour
         {
             isCooldownTele = true;
         }
-        if(Input.GetKeyDown(KeyCode.X) && quantityBomb.GetBomb() > 0)
+        if(Input.GetKeyDown(KeyCode.X) && quantityBomb.GetBomb() > 0 && !isCoolDownPlan)
         {
             isCoolDownPlan = true;
+            quantityBomb.SubBomb();
+            string stringBombParameter = string.Format("Bombs: {0}", quantityBomb.GetBomb());
+            changeBombParemeter.text = stringBombParameter;
         }
         if(isCoolDownPlan){
+            
             imageCooldown[1].fillAmount += 1 / coolDownPlan * Time.deltaTime;
             stopPlanting.enabled = false;
-            if(imageCooldown[1].fillAmount >= 1){
+            if(imageCooldown[1].fillAmount >= 1)
+            {
                 imageCooldown[1].fillAmount = 0;
                 stopPlanting.enabled = true;
                 isCoolDownPlan = false;

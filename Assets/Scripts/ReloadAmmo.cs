@@ -10,17 +10,17 @@ public class ReloadAmmo : MonoBehaviour
     [SerializeField] private Behaviour stopFireOfTank;
     public void Reload()
     {
+         if (maxAmmoInCase == 0) {
+            stopFireOfTank.enabled = false;
+            reloadTutorial.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.Mouse0) && maxAmmoInCase > 0)
         {
             maxAmmoInCase--;
             string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
             updateTextAmmo.text = updateBulletInCase;
         }
-        if (maxAmmoInCase == 0) {
-            stopFireOfTank.enabled = false;
-            reloadTutorial.SetActive(true);
-        }
-        
+         
         if (Input.GetKeyDown(KeyCode.R) && maxAmmo > 0)
         {
             reloadTutorial.SetActive(false);

@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heal: {fileID: 5345834619337174257}
+  questKillEnemy: {fileID: 0}
 --- !u!114 &5345834619337174257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0461b622b7b5c534abccface63e42d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemElement: []
+  itemElement:
+  - {fileID: 57425419425340915, guid: 36eb5a24caf42bb4f922d9eaa1bc1590, type: 3}
+  - {fileID: 4121763290884122305, guid: 048743d892f90ca4eb4ffa276fc70f8b, type: 3}
+  - {fileID: 2301332036903134213, guid: f69b2aefe245b0643a14fb72bd2d5355, type: 3}
+  - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
 --- !u!195 &5345834619337174263
 NavMeshAgent:
   m_ObjectHideFlags: 0

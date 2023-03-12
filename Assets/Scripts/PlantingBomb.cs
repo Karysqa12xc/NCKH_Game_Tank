@@ -8,7 +8,6 @@ public class PlantingBomb : MonoBehaviour
     Vector3 positionCrossHair;
     [SerializeField] private GameObject bombPreabs;
     [SerializeField] private AklbuAlapba ActiveBomb;
-    [SerializeField] private TextMeshProUGUI changeBombParemeter;
     [SerializeField] private TakeItems quantityBomb;
     private void Start()
     {
@@ -18,10 +17,7 @@ public class PlantingBomb : MonoBehaviour
     public void Planting()
     {
         if (Input.GetKeyDown(KeyCode.X) && quantityBomb.GetBomb() > 0)
-        {   
-            quantityBomb.SubBomb();
-            string stringBombParameter = string.Format("Bombs: {0}", quantityBomb.GetBomb());
-            changeBombParemeter.text = stringBombParameter;
+        {     
             positionCrossHair = posittionOfCrosshair.CrosshairPosition;
             Instantiate(bombPreabs, positionCrossHair, bombPreabs.transform.rotation);
         }

@@ -26,7 +26,7 @@ public class AklbuAlapba : MonoBehaviour
     }
     private void Update()
     {
-        Invoke("DestroyBomb", 0.1f);
+        Invoke("DestroyBomb", .4f);
     }
     private IEnumerator Blast()
     {

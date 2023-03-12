@@ -154,6 +154,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5475279185534316986}
     m_Modifications:
+    - target: {fileID: -20677868439748787, guid: e4fc36e41c047f848b674d163796b673, type: 3}
+      propertyPath: itemElement.Array.data[0]
+      value: 
+      objectReference: {fileID: 57425419425340915, guid: 36eb5a24caf42bb4f922d9eaa1bc1590, type: 3}
+    - target: {fileID: -20677868439748787, guid: e4fc36e41c047f848b674d163796b673, type: 3}
+      propertyPath: itemElement.Array.data[2]
+      value: 
+      objectReference: {fileID: 2301332036903134213, guid: f69b2aefe245b0643a14fb72bd2d5355, type: 3}
     - target: {fileID: 2677297985139700013, guid: e4fc36e41c047f848b674d163796b673, type: 3}
       propertyPath: m_Name
       value: EnemyRedTerrorism
@@ -176,11 +184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4355832106299000476, guid: e4fc36e41c047f848b674d163796b673, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4355832106299000476, guid: e4fc36e41c047f848b674d163796b673, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4355832106299000476, guid: e4fc36e41c047f848b674d163796b673, type: 3}
       propertyPath: m_LocalRotation.w
@@ -228,6 +236,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2677297985139700013, guid: e4fc36e41c047f848b674d163796b673, type: 3}
   m_PrefabInstance: {fileID: 5475279185622705677}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &787510155
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988177641347700512}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &787510154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988177641347700512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9107852, y: 1.125915, z: 2.6642036}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &5475279185336684342
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -264,35 +301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 5475279185178995888}
   range: 2
---- !u!54 &787510155
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988177641347700512}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &787510154
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7988177641347700512}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9107852, y: 1.125915, z: 2.6642036}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &8615139040843276433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4355832106299000476, guid: e4fc36e41c047f848b674d163796b673, type: 3}

@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TurnOnTeleport : MonoBehaviour
 {
-    [SerializeField] private Behaviour teleportScript, moveTankScript, fireTankScript, PlantingScript;
-    [SerializeField] private GameObject turnOnTeleUI, howToTeleport;
+    [SerializeField] private Behaviour teleportScript;
+    [SerializeField] private GameObject turnOnTeleUI, howToTeleport, _Player;
     [SerializeField] private Button turnOffBtn;
     int countTrigger = 0;
     private void Start()
@@ -18,21 +18,17 @@ public class TurnOnTeleport : MonoBehaviour
         {
             Time.timeScale = 0;
             countTrigger++;   
+            _Player.SetActive(false);
             turnOnTeleUI.SetActive(true);
             howToTeleport.SetActive(true);
             teleportScript.enabled = true;
-            moveTankScript.enabled = false;
-            fireTankScript.enabled = false;
-            PlantingScript.enabled = false;
         }
     }
     public void turnOffTeleportTutorial()
     {
         Time.timeScale = 1;
+        _Player.SetActive(true);
         howToTeleport.SetActive(false);
         turnOnTeleUI.SetActive(true);
-        moveTankScript.enabled = true;
-        fireTankScript.enabled = true;
-        PlantingScript.enabled = true;
     }
 }

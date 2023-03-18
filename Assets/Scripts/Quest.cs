@@ -7,18 +7,20 @@ public class Quest : MonoBehaviour
 {
     public Image[] completedQuestImage;
     public GameObject[] Enemies;
+    public GameObject finishedGame, PointDirection;
     public int countEnemy = 0, key = 0;
     public Color completedQuest;
     public bool isGetKey, isKillAllEnemy;
     void Start()
     {
+        PointDirection.SetActive(false);
+        finishedGame.SetActive(false);
         completedQuest = new Color(65, 212, 61);
         Enemies = GameObject.FindGameObjectsWithTag("Enemy");
         for(int i = 0; i < Enemies.Length; i++){
             countEnemy++;
         } 
     }
-    
     void Update()
     {
         FinishQuest();
@@ -28,9 +30,13 @@ public class Quest : MonoBehaviour
             isKillAllEnemy = true;
             completedQuestImage[0].color = completedQuest;
         } 
-        if(key == 1){
+        if(key >= 1){
             isGetKey = true;
             completedQuestImage[1].color = completedQuest;
+        }
+        if(isGetKey && isKillAllEnemy) {
+            finishedGame.SetActive(true);
+            PointDirection.SetActive(true);
         }
         
     }

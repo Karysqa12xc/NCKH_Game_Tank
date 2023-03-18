@@ -8,6 +8,15 @@ public class ReloadAmmo : MonoBehaviour
     [SerializeField] private GameObject reloadTutorial;
     [SerializeField] private int maxAmmo = 100, maxAmmoInCase = 6;
     [SerializeField] private Behaviour stopFireOfTank;
+    [SerializeField] private AudioSource realoadSource;
+    [SerializeField] private  AudioClip reloadClip;
+    public int GetMaxAmmo() => maxAmmo;
+    public int GetMaxAmmoInCase() => maxAmmoInCase;
+    public int AdditionalAmmo() => maxAmmo = maxAmmo + 6;
+    public void updateParameterOfBullet(){
+        string updateBulletInCase = string.Format("Bullets: {0}/{1}", GetMaxAmmoInCase(), GetMaxAmmo());
+        updateTextAmmo.text = updateBulletInCase;
+    }
     public void Reload()
     {
          if (maxAmmoInCase == 0) {
@@ -17,12 +26,12 @@ public class ReloadAmmo : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && maxAmmoInCase > 0)
         {
             maxAmmoInCase--;
-            string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
-            updateTextAmmo.text = updateBulletInCase;
+            updateParameterOfBullet();
         }
          
         if (Input.GetKeyDown(KeyCode.R) && maxAmmo > 0)
         {
+            realoadSource.PlayOneShot(reloadClip);
             reloadTutorial.SetActive(false);
             if (maxAmmo < 6)
             {
@@ -30,16 +39,14 @@ public class ReloadAmmo : MonoBehaviour
                 {
                     maxAmmoInCase = maxAmmoInCase + maxAmmo;
                     maxAmmo = maxAmmo - maxAmmo;
-                    string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
-                    updateTextAmmo.text = updateBulletInCase;
+                    updateParameterOfBullet();
                 }
             }
             if (maxAmmo > 0)
             {
                 maxAmmo = maxAmmo - (6 - maxAmmoInCase);
                 maxAmmoInCase = maxAmmoInCase + (6 - maxAmmoInCase);
-                string updateBulletInCase = string.Format("Bullets: {0}/{1}", maxAmmoInCase, maxAmmo);
-                updateTextAmmo.text = updateBulletInCase;
+                updateParameterOfBullet();
             }
 
             if (maxAmmoInCase <= 6) stopFireOfTank.enabled = true;

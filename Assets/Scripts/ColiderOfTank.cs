@@ -17,6 +17,7 @@ public class ColiderOfTank : MonoBehaviour
         if(other.gameObject.tag == "Bomb") pickItems.pickItem(other.gameObject);
         if(other.gameObject.tag == "Key") pickItems.pickItem(other.gameObject);
         if(other.gameObject.tag == "Heal") pickItems.pickItem(other.gameObject);
+        if(other.gameObject.tag == "BulletItem") pickItems.pickItem(other.gameObject);
         if(other.gameObject.tag == "BulletEnenmy"){
             healOfPlayer.TakeDamge(1);
             healOfPlayer.DiePlayer(turnOnGameOverScrenn);   

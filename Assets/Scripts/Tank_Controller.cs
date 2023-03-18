@@ -20,19 +20,23 @@ public class Tank_Controller : MonoBehaviour
     // private CharacterController characterController;
     private Tank_Inputs inputs;
     private Vector3 finalTurretLookDir;
+    public float acceleration = 1000f;
+    public float breakingForce = 600f;
+    public float maxTurnAngle = 15f;
     [Header("Wheel Controller")]
     [SerializeField] private WheelCollider frontRight;
     [SerializeField] private WheelCollider frontLeft;
     [SerializeField] private WheelCollider backRight;
     [SerializeField] private WheelCollider backLeft;
-
+    [Header("Wheel Transfrom")]
     [SerializeField] Transform frontRightTransfrom;
     [SerializeField] Transform frontLeftTransfrom;
     [SerializeField] Transform backRightTransfrom;
     [SerializeField] Transform backLeftTransfrom;
-    public float acceleration = 1000f;
-    public float breakingForce = 600f;
-    public float maxTurnAngle = 15f;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource moveSource;
+
     private float currentAcceleration = 0f;
     private float currentBreakForce = 0f;
     private float currentTurnAngel = 0f;
@@ -62,8 +66,11 @@ public class Tank_Controller : MonoBehaviour
         // Quaternion wantedRotation = transform.rotation * Quaternion.Euler(Vector3.up * inputs.RotationInput * tankRotationSpeed * Time.deltaTime);
         // rb.MoveRotation(wantedRotation);
         currentAcceleration = acceleration * inputs.ForwardInput;
-        if(Input.GetKey(KeyCode.Space)) 
+        moveSource.Play();
+        if (Input.GetKey(KeyCode.Space)){
+            moveSource.Pause();
             currentBreakForce = breakingForce;
+        }
         else
             currentBreakForce = 0f;
 
@@ -84,7 +91,8 @@ public class Tank_Controller : MonoBehaviour
         updateWheel(backLeft, backLeftTransfrom);
         updateWheel(backRight, backRightTransfrom);
     }
-    void updateWheel(WheelCollider col, Transform trans){
+    void updateWheel(WheelCollider col, Transform trans)
+    {
         Vector3 position;
         Quaternion rotation;
         col.GetWorldPose(out position, out rotation);

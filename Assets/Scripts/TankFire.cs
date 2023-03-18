@@ -9,10 +9,13 @@ public class TankFire : MonoBehaviour
     public float speedBullet = 10;
     public Transform FireStart;
     private Transform mCannon;
+    [SerializeField]private AudioSource fireAudio;
+    [SerializeField]private AudioClip fireClip;
     public void Update()
     {  
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
+            fireAudio.PlayOneShot(fireClip);
             rbShell = Instantiate(Shell, FireStart.position, FireStart.rotation);
             rbShell.GetComponent<Rigidbody>().velocity = FireStart.forward * speedBullet;
         }

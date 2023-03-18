@@ -16,6 +16,7 @@ TagManager:
   - NextLevel
   - Key
   - Heal
+  - BulletItem
   layers:
   - Default
   - TransparentFX

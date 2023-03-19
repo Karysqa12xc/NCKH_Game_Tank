@@ -6,6 +6,7 @@ public class AntiRollOver : MonoBehaviour
 {
     [SerializeField] private Transform _playerRotation;
     [SerializeField] private GameObject instuctAntiRollOver;
+    
 
     private void Start()
     {
@@ -31,7 +32,6 @@ public class AntiRollOver : MonoBehaviour
             _playerRotation.rotation.eulerAngles.z == 270 ||
             _playerRotation.rotation.eulerAngles.x == -270 ||
             _playerRotation.rotation.eulerAngles.z == -270
-
         )
         {
             instuctAntiRollOver.SetActive(true);

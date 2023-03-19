@@ -10,6 +10,8 @@ public class AklbuAlapba : MonoBehaviour
     public float startWidth;
     public float force;
     private LineRenderer lineRenderer;
+    [SerializeField] private AudioClip bombAduioClip;
+    [SerializeField] private AudioSource bombAduioSource;
 
     private void Awake()
     {
@@ -48,6 +50,7 @@ public class AklbuAlapba : MonoBehaviour
             HealCharater heal = hittingObjects[i].GetComponent<HealCharater>();
             if (hittingObjects[i].gameObject.tag == "CheckPoint" || hittingObjects[i].gameObject.tag == "Enemy")
             {
+                bombAduioSource.PlayOneShot(bombAduioClip);
                 Vector3 direction = (hittingObjects[i].transform.position - transform.position).normalized;
                 rb.AddForce(direction * force, ForceMode.Impulse);
                 heal.TakeDamge(1);

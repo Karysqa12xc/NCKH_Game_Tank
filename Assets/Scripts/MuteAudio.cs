@@ -7,7 +7,6 @@ public class MuteAudio : MonoBehaviour
 {
     private bool isMuted;
 
-
     private void Start()
     {
         isMuted = false;

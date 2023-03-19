@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ColiderOfTank : MonoBehaviour
 {
     [SerializeField]private TakeItems pickItems;
-    [SerializeField] private HealCharater healOfPlayer;
+    [SerializeField]private HealCharater healOfPlayer;
     [SerializeField] private GameObject turnOnGameOverScrenn, turnOnNextLevelScrenn;
     private void Start() 
     {

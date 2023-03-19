@@ -8,7 +8,7 @@ public class HealCharater : MonoBehaviour
     [SerializeField] private HealBar healBar;
     [SerializeField] private GameScore updateScoreTotal;
     [SerializeField] private Quest checkOneEnemy;
-    
+    [SerializeField] private AudioBehaviour backGroundAudio;
     private DropItem Drop;
     [SerializeField]private float curHealth;
     public float GetMaxHealth()
@@ -47,6 +47,7 @@ public class HealCharater : MonoBehaviour
     public void DiePlayer(GameObject turnOnGameOverScrenn){
         if(curHealth <= 0){
             turnOnGameOverScrenn.SetActive(true);
+            backGroundAudio.enabled = false;
             gameObject.SetActive(false);
             Time.timeScale = 0;
         }

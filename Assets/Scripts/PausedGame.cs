@@ -5,6 +5,7 @@ public class PausedGame : MonoBehaviour
 {
     [SerializeField] private GameObject pauseGameScrenn;
     [SerializeField] private static bool GameIsPaused = false;
+    [SerializeField] private AudioSource stopBackGroudAudio;
     void Update()
     {
         turnOnScrenn();
@@ -13,8 +14,16 @@ public class PausedGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (GameIsPaused) Restart();            
-            else Pause();
+            if (GameIsPaused) 
+            {
+                stopBackGroudAudio.Play();
+                Restart();
+            }            
+            else 
+            {   
+                stopBackGroudAudio.Pause();
+                Pause();
+            }
         }
     }
     public void Restart()

@@ -31,7 +31,7 @@ public class ReloadAmmo : MonoBehaviour
          
         if (Input.GetKeyDown(KeyCode.R) && maxAmmo > 0)
         {
-            realoadSource.PlayOneShot(reloadClip);
+            if(maxAmmoInCase < 6) realoadSource.PlayOneShot(reloadClip);
             reloadTutorial.SetActive(false);
             if (maxAmmo < 6)
             {

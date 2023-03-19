@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 4413237211108756711}
   - component: {fileID: 672221883692107419}
   - component: {fileID: 4413237209760239216}
+  - component: {fileID: 672221883692107429}
   m_Layer: 0
   m_Name: TankBlueMain
   m_TagString: Player
@@ -754,6 +755,9 @@ MonoBehaviour:
   turretTransfron: {fileID: 73393757413598458}
   turretLagSpeed: 1
   crossHairTranfrom: {fileID: 0}
+  acceleration: 1000
+  breakingForce: 800
+  maxTurnAngle: 20
   frontRight: {fileID: 8721850054680380731}
   frontLeft: {fileID: 833486204}
   backRight: {fileID: 251945844}
@@ -762,9 +766,7 @@ MonoBehaviour:
   frontLeftTransfrom: {fileID: 3483266736493699122}
   backRightTransfrom: {fileID: 7132374128501472421}
   backLeftTransfrom: {fileID: 3442068795852274635}
-  acceleration: 1000
-  breakingForce: 800
-  maxTurnAngle: 20
+  moveSource: {fileID: 672221883692107429}
 --- !u!114 &4413237211108756499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,6 +796,8 @@ MonoBehaviour:
   Shell: {fileID: 4497762029364841149, guid: 0fde24d0ae1b3cd43b7d2cc202606b8d, type: 3}
   speedBullet: 30
   FireStart: {fileID: 4413237210382828640}
+  fireAudio: {fileID: 672221883692107429}
+  fireClip: {fileID: 8300000, guid: 8a718688afc9afb4e820f1aa83490948, type: 3}
 --- !u!114 &4413237211108756500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,6 +814,7 @@ MonoBehaviour:
   healBar: {fileID: 4413237211255813122}
   updateScoreTotal: {fileID: 0}
   checkOneEnemy: {fileID: 0}
+  backGroundAudio: {fileID: 0}
   curHealth: 0
 --- !u!114 &4413237211108756509
 MonoBehaviour:
@@ -888,6 +893,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerRotation: {fileID: 3777044413893429490}
   instuctAntiRollOver: {fileID: 0}
+--- !u!82 &672221883692107429
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260161430004088643}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.833
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3340429690501358811
 GameObject:
   m_ObjectHideFlags: 0

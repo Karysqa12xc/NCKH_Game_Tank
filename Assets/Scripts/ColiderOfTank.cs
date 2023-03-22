@@ -22,6 +22,10 @@ public class ColiderOfTank : MonoBehaviour
             healOfPlayer.TakeDamge(1);
             healOfPlayer.DiePlayer(turnOnGameOverScrenn);   
         }
+        if(other.gameObject.tag == "Water"){
+            healOfPlayer.TakeDamge(20);
+            healOfPlayer.DiePlayer(turnOnGameOverScrenn);
+        }
         if(other.gameObject.tag == "NextLevel"){
             turnOnNextLevelScrenn.SetActive(true);
             gameObject.SetActive(false);

@@ -490,6 +490,8 @@ MonoBehaviour:
   stopPlanting: {fileID: 0}
   coolDownTele: 15
   coolDownPlan: 10
+  quantityBomb: {fileID: 0}
+  changeBombParemeter: {fileID: 0}
 --- !u!1 &194837602175668445
 GameObject:
   m_ObjectHideFlags: 0

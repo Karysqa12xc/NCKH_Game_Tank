@@ -28,6 +28,7 @@ public class HealCharater : MonoBehaviour
     {
         curHealth = maxHealth;
         Drop = GetComponent<DropItem>();
+        updateScoreTotal = GameObject.FindGameObjectWithTag("Score").GetComponent<GameScore>();
         checkOneEnemy = GameObject.Find("QuestUI").GetComponent<Quest>();
     }
 

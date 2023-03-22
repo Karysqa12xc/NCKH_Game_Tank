@@ -11,18 +11,17 @@ public class DestroyBullet : MonoBehaviour
         _Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Update() {
-        takeCareDistance();
+        if(gameObject.tag == "Player") takeCareDistancePlayer();
     }
-    private void takeCareDistance(){
+    private void takeCareDistancePlayer(){
         dist = Vector3.Distance(_Player.position, transform.position);
-        if(dist >= 15){
+        if(dist >= 20){
             Destroy(gameObject);
         }
     }
     private void OnCollisionEnter(Collision other)
     {
         Effect.Play();
-        
         if(other.gameObject.tag != "BulletRed") Destroy(gameObject);
     }
 }

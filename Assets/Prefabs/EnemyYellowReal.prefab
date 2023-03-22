@@ -268,6 +268,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9107852, y: 1.125915, z: 2.6642036}
   m_Center: {x: 0.0000003874302, y: 0.06295732, z: -0.038929284}
+--- !u!114 &1738247398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614095814740728204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b73ec814b8e8a40a3fd7eb64691620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1762856073382123872}
+  range: 5
 --- !u!114 &1762856073742310834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,9 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342cab56f095e4a4fb9703078ccf76b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 3
   healBar: {fileID: 7219139945284657828}
   updateScoreTotal: {fileID: 0}
+  checkOneEnemy: {fileID: 0}
+  backGroundAudio: {fileID: 0}
+  curHealth: 0
 --- !u!195 &1762856073742310835
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -335,7 +352,7 @@ MonoBehaviour:
   - {fileID: 57425419425340915, guid: 36eb5a24caf42bb4f922d9eaa1bc1590, type: 3}
   - {fileID: 4121763290884122305, guid: 048743d892f90ca4eb4ffa276fc70f8b, type: 3}
   - {fileID: 2301332036903134213, guid: f69b2aefe245b0643a14fb72bd2d5355, type: 3}
-  - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
+  - {fileID: 9066975888288061042, guid: b086e2339bbdfa345abaacb0f3d6d9bd, type: 3}
 --- !u!4 &2185197681892283283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 442916221043226629, guid: ae98f3b2f9fb19e4dba07742ad8d6f4d, type: 3}
@@ -461,6 +478,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1095150941578964541}
     m_Modifications:
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.79
+      objectReference: {fileID: 0}
     - target: {fileID: 1593473539148740118, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
       propertyPath: m_Name
       value: Colide

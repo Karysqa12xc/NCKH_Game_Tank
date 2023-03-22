@@ -154,6 +154,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9073518607849155580}
     m_Modifications:
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Center.y
+      value: 1.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1593473539148740118, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
       propertyPath: m_Name
       value: Colide
@@ -441,6 +449,9 @@ MonoBehaviour:
   maxHealth: 4
   healBar: {fileID: 3920767795248522014}
   updateScoreTotal: {fileID: 0}
+  checkOneEnemy: {fileID: 0}
+  backGroundAudio: {fileID: 0}
+  curHealth: 0
 --- !u!114 &5345834619337174260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 5345834618329451120}
-  range: 5
+  range: 10
 --- !u!114 &5345834619337174262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,7 +482,7 @@ MonoBehaviour:
   - {fileID: 57425419425340915, guid: 36eb5a24caf42bb4f922d9eaa1bc1590, type: 3}
   - {fileID: 4121763290884122305, guid: 048743d892f90ca4eb4ffa276fc70f8b, type: 3}
   - {fileID: 2301332036903134213, guid: f69b2aefe245b0643a14fb72bd2d5355, type: 3}
-  - {fileID: 5337313064456711296, guid: 54bb213667eda734b98bef43a3ff6c93, type: 3}
+  - {fileID: 9066975888288061042, guid: b086e2339bbdfa345abaacb0f3d6d9bd, type: 3}
 --- !u!195 &5345834619337174263
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -517,12 +528,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Player: {fileID: 0}
-  speedBullet: 32
+  speedBullet: 30
   howClose: 22
   tower: {fileID: 5225833371742849012}
   bulletPreabs: {fileID: 5345834619869212830}
   _projectile: {fileID: 8970238334938327609, guid: 35dc58bbeefd5534082cb9ce5632435e, type: 3}
-  fireRate: 2
+  fireRate: 1.5
   nextFire: 0
 --- !u!4 &9073518607849155580 stripped
 Transform:

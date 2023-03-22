@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PausedGame : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseGameScrenn;
+    [SerializeField] private GameObject pauseGameScrenn, _player;
     [SerializeField] private static bool GameIsPaused = false;
     [SerializeField] private AudioSource stopBackGroudAudio;
+    private void Start() {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Update()
     {
         turnOnScrenn();
@@ -16,11 +19,13 @@ public class PausedGame : MonoBehaviour
         {
             if (GameIsPaused) 
             {
+                _player.SetActive(true);
                 stopBackGroudAudio.Play();
                 Restart();
             }            
             else 
             {   
+                _player.SetActive(false);
                 stopBackGroudAudio.Pause();
                 Pause();
             }
@@ -38,14 +43,9 @@ public class PausedGame : MonoBehaviour
         Time.timeScale = 0;
         GameIsPaused = true;
     }
-    public void SetTimeScaleOfRestartBtn(){
+    public void SetTimeScaleOfBtn(){
         Time.timeScale = 1f;
     }
-    public void SetTimeScaleOfHomeBtn(){
-        Time.timeScale = 1f;
-    }
-    public void SetTimeScaleOfNextLevel(){
-        Time.timeScale = 1f;
-    }
+   
 
 }

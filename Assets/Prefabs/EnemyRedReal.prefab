@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: itemElement.Array.data[2]
       value: 
       objectReference: {fileID: 2301332036903134213, guid: f69b2aefe245b0643a14fb72bd2d5355, type: 3}
+    - target: {fileID: -20677868439748787, guid: e4fc36e41c047f848b674d163796b673, type: 3}
+      propertyPath: itemElement.Array.data[3]
+      value: 
+      objectReference: {fileID: 9066975888288061042, guid: b086e2339bbdfa345abaacb0f3d6d9bd, type: 3}
     - target: {fileID: 2677297985139700013, guid: e4fc36e41c047f848b674d163796b673, type: 3}
       propertyPath: m_Name
       value: EnemyRedTerrorism
@@ -338,6 +342,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8615139040843276433}
     m_Modifications:
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Size.y
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593473539148740116, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1593473539148740118, guid: ffe6a30cdf6285b42a913eb1e46a487d, type: 3}
       propertyPath: m_Name
       value: Colide

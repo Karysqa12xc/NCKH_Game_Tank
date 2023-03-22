@@ -8,7 +8,7 @@ public class TakeItems : MonoBehaviour
     [SerializeField] private int minBomb = 0;
     [SerializeField]private Quest questGetKey;
     [SerializeField] private HealCharater healingPlayer;
-    [SerializeField] private ReloadAmmo checkAmmoOfPlayer;
+    [SerializeField]private ReloadAmmo checkAmmoOfPlayer;
     private void Start() {
         checkAmmoOfPlayer = GameObject.Find("ChangeBullet").GetComponent<ReloadAmmo>();
         healingPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<HealCharater>();

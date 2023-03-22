@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &848624933824696060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848624933824696062}
+  - component: {fileID: 848624933824696063}
+  m_Layer: 0
+  m_Name: EnemySpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &848624933824696062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848624933824696060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74.5, y: 0, z: 168.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848624933824696063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848624933824696060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c234c2dfcf0566648b7c74daada7f846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBase:
+  - {fileID: 5475279185534316985, guid: 12cdf9027b37178408b5b03643275953, type: 3}
+  - {fileID: 1762856073312466072, guid: a40205f2a4e71954b8c17d00eabaa649, type: 3}
+  - {fileID: 5345834619050732494, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
+  xPosRand1: 4b000000b8ffffffb3ffffffffffffff4f000000
+  xPosRand2: 5a000000c4ffffffc4ffffff2a00000055000000
+  zPosRand1: a9000000ae0000000c01000036010000ef000000
+  zPosRand2: c8000000c80000002201000038010000f4000000
+  xPos: 0000000000000000000000000000000000000000
+  zPos: 0000000000000000000000000000000000000000
+  QuantityEnemySpawn: 1

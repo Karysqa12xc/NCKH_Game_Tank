@@ -17,6 +17,10 @@ TagManager:
   - Key
   - Heal
   - BulletItem
+  - Water
+  - Score
+  - WheelTrigger
+  - AntiRollOver
   layers:
   - Default
   - TransparentFX

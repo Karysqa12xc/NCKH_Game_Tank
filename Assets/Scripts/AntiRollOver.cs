@@ -7,11 +7,11 @@ public class AntiRollOver : MonoBehaviour
     [SerializeField] private Transform _playerRotation;
     [SerializeField] private GameObject instuctAntiRollOver;
     
-
     private void Start()
     {
         _playerRotation = GetComponent<Transform>();
     }
+    
     void Update()
     {
         handleRollOver();
@@ -35,11 +35,12 @@ public class AntiRollOver : MonoBehaviour
         )
         {
             instuctAntiRollOver.SetActive(true);
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 instuctAntiRollOver.SetActive(false);
                 _playerRotation.rotation = Quaternion.identity;
-            }
+            } 
         }
     }
 }

@@ -13,6 +13,9 @@ public class ReloadAmmo : MonoBehaviour
     public int GetMaxAmmo() => maxAmmo;
     public int GetMaxAmmoInCase() => maxAmmoInCase;
     public int AdditionalAmmo() => maxAmmo = maxAmmo + 6;
+    private void Start() {
+        stopFireOfTank = GameObject.FindGameObjectWithTag("Player").GetComponent<TankFire>();
+    }
     public void updateParameterOfBullet(){
         string updateBulletInCase = string.Format("Bullets: {0}/{1}", GetMaxAmmoInCase(), GetMaxAmmo());
         updateTextAmmo.text = updateBulletInCase;
@@ -33,22 +36,20 @@ public class ReloadAmmo : MonoBehaviour
         {
             if(maxAmmoInCase < 6) realoadSource.PlayOneShot(reloadClip);
             reloadTutorial.SetActive(false);
-            if (maxAmmo < 6)
-            {
-                if (maxAmmoInCase == 0)
+            if(maxAmmo < 6){
+                if (maxAmmoInCase == 0 || maxAmmoInCase < 6)
                 {
-                    maxAmmoInCase = maxAmmoInCase + maxAmmo;
-                    maxAmmo = maxAmmo - maxAmmo;
-                    updateParameterOfBullet();
+                        maxAmmoInCase = maxAmmoInCase +  maxAmmo;
+                        maxAmmo = maxAmmo - maxAmmo;
+                        updateParameterOfBullet();
                 }
             }
-            if (maxAmmo > 0)
+            if (maxAmmo > 1)
             {
                 maxAmmo = maxAmmo - (6 - maxAmmoInCase);
                 maxAmmoInCase = maxAmmoInCase + (6 - maxAmmoInCase);
                 updateParameterOfBullet();
             }
-
             if (maxAmmoInCase <= 6) stopFireOfTank.enabled = true;
         }
 

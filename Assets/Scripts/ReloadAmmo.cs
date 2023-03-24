@@ -37,7 +37,7 @@ public class ReloadAmmo : MonoBehaviour
             if(maxAmmoInCase < 6) realoadSource.PlayOneShot(reloadClip);
             reloadTutorial.SetActive(false);
             if(maxAmmo < 6){
-                if (maxAmmoInCase == 0 || maxAmmoInCase < 6)
+                if (maxAmmoInCase >= 0 && maxAmmoInCase < 6 || maxAmmoInCase == 1)
                 {
                         maxAmmoInCase = maxAmmoInCase +  maxAmmo;
                         maxAmmo = maxAmmo - maxAmmo;

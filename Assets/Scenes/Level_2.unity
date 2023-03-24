@@ -19066,6 +19066,10 @@ PrefabInstance:
       propertyPath: PointDirection
       value: 
       objectReference: {fileID: 1113513621}
+    - target: {fileID: 8083539279801567526, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: finishedGameObstacle
+      value: 
+      objectReference: {fileID: 597346787}
     - target: {fileID: 8083539279854514453, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

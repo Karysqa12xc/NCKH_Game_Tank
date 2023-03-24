@@ -14432,6 +14432,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8083539279764803321, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: m_text
+      value: 'Bullets: 6/100'
+      objectReference: {fileID: 0}
     - target: {fileID: 8083539279801567526, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: blockLevel
       value: 
@@ -14444,6 +14448,10 @@ PrefabInstance:
       propertyPath: PointDirection
       value: 
       objectReference: {fileID: 2063191994}
+    - target: {fileID: 8083539279801567526, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: finishedGameObstacle
+      value: 
+      objectReference: {fileID: 1695645000}
     - target: {fileID: 8083539279854514453, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -14603,6 +14611,14 @@ PrefabInstance:
     - target: {fileID: 8083539280773823447, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083539281499019408, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: maxAmmo
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083539281499019408, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: maxAmmoInCase
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8083539281499019408, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: reloadTutorial

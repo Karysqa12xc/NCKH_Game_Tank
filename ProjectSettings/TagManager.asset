@@ -21,6 +21,7 @@ TagManager:
   - Score
   - WheelTrigger
   - AntiRollOver
+  - BombText
   layers:
   - Default
   - TransparentFX

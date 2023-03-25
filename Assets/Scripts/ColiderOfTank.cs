@@ -8,6 +8,8 @@ public class ColiderOfTank : MonoBehaviour
     [SerializeField]private TakeItems pickItems;
     [SerializeField]private HealCharater healOfPlayer;
     [SerializeField] private GameObject turnOnGameOverScrenn, turnOnNextLevelScrenn;
+    public int levelToUnlock;
+    int numberOfUnlockeLevels;
     private void Start() 
     {
         healOfPlayer = GetComponent<HealCharater>();
@@ -29,6 +31,10 @@ public class ColiderOfTank : MonoBehaviour
         if(other.gameObject.tag == "NextLevel"){
             turnOnNextLevelScrenn.SetActive(true);
             gameObject.SetActive(false);
+            numberOfUnlockeLevels = PlayerPrefs.GetInt("levelsUnlocked");
+            if(numberOfUnlockeLevels <= levelToUnlock){
+                PlayerPrefs.SetInt("levelsUnlocked", numberOfUnlockeLevels + 1);
+            }
         }
     }
   

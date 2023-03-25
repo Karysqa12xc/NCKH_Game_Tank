@@ -16,7 +16,7 @@ public class SkillCooldown : MonoBehaviour
         quantityBomb = GameObject.Find("TankBlueMain").GetComponent<TakeItems>();
         stopTeleport = GameObject.Find("TankBlueMain").GetComponent<Teleport>();
         stopPlanting = GameObject.Find("TankBlueMain").GetComponent<PlantingBomb>();
-        changeBombParemeter = GameObject.Find("Bomb").GetComponent<TextMeshProUGUI>();
+        changeBombParemeter = GameObject.FindGameObjectWithTag("BombText").GetComponent<TextMeshProUGUI>();
     }
     void Update()
     {

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: 119b49f827321e34ea1e0edca4d6dc10
+  - enabled: 1
+    path: Assets/Scenes/Creadit.unity
+    guid: 3d10cc36f4e38ab469a822668dcf1a08
   m_configObjects: {}

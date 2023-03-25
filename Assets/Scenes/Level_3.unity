@@ -7988,7 +7988,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 120, y: 1, z: 200}
-  m_Center: {x: 50.2, y: 1.29, z: -35}
+  m_Center: {x: 50.2, y: 0.34, z: -35}
 --- !u!1001 &604057533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10391,6 +10391,10 @@ PrefabInstance:
       propertyPath: maxAmmoInCase
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8083539281678214114, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: m_TagString
+      value: BombText
+      objectReference: {fileID: 0}
     - target: {fileID: 8083539281678214117, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11019,6 +11023,10 @@ PrefabInstance:
     - target: {fileID: 4413237211108756503, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413237211108756509, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
+      propertyPath: levelToUnlock
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4413237211108756509, guid: 12c4102431060ce46936f75ea4581b99, type: 3}
       propertyPath: turnOnGameOverScrenn

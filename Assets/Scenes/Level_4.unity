@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.46169478, g: 0.512416, b: 0.5899326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5471,7 +5471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.6
+      value: 19.2
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5479,7 +5479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80.2
+      value: 81.6
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5667,6 +5667,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194837601100517884, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837601526446011, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 194837602060774116, guid: 822f8425f44e72649829ad374b411777, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5754,6 +5762,14 @@ PrefabInstance:
     - target: {fileID: 194837602060774120, guid: 822f8425f44e72649829ad374b411777, type: 3}
       propertyPath: m_Name
       value: Desciption
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837602204761730, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837602687034206, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 822f8425f44e72649829ad374b411777, type: 3}
@@ -5924,7 +5940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.5
+      value: 19.2
       objectReference: {fileID: 0}
     - target: {fileID: 5345834619050732489, guid: ec7ad1e1bb001524fae473a83c667a55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12353,7 +12369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592804383920649288, guid: 6db997cc4a29e3742a5a0c2edf48c7dd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8592804383920649288, guid: 6db997cc4a29e3742a5a0c2edf48c7dd, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -16673,6 +16689,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1287862449}
     m_Modifications:
+    - target: {fileID: 7293093873675615040, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.33558294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293093873675615040, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.38269764
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293093873675615040, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7293278140675626300, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18263,6 +18291,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: blockLevel
+      value: 
+      objectReference: {fileID: 1085941309}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: PointDirection
+      value: 
+      objectReference: {fileID: 839991399}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: finishedGameObstacle
+      value: 
+      objectReference: {fileID: 1549016581}
     - target: {fileID: 8083539279764803270, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

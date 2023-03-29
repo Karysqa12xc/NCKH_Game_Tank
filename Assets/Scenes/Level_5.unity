@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.46169478, g: 0.512416, b: 0.5899326, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 01e7a95e37fe7374bb01b76c745dacd1, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -16000,14 +16000,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986549718}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.6083044, y: -0.20104735, z: 0.16299465, w: 0.75031894}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 78.065, y: -30, z: 0}
 --- !u!1001 &988857370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19420,7 +19420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592804383920649288, guid: 6db997cc4a29e3742a5a0c2edf48c7dd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 8592804383920649288, guid: 6db997cc4a29e3742a5a0c2edf48c7dd, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -30826,6 +30826,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 194837601100517884, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837601526446011, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 194837602060774115, guid: 822f8425f44e72649829ad374b411777, type: 3}
       propertyPath: changeBombParemeter
       value: 
@@ -30919,6 +30927,14 @@ PrefabInstance:
       value: Desciption
       objectReference: {fileID: 0}
     - target: {fileID: 194837602060774120, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837602204761730, guid: 822f8425f44e72649829ad374b411777, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194837602687034206, guid: 822f8425f44e72649829ad374b411777, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -31866,6 +31882,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: blockLevel
+      value: 
+      objectReference: {fileID: 377079509}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: PointDirection
+      value: 
+      objectReference: {fileID: 969870361}
+    - target: {fileID: 7556853708450570627, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
+      propertyPath: finishedGameObstacle
+      value: 
+      objectReference: {fileID: 827137217}
     - target: {fileID: 8083539279764803270, guid: b91489fe124f2cb43b1318d6d87404d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -35277,6 +35305,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1462301406}
     m_Modifications:
+    - target: {fileID: 7293093873675615040, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.36110774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293093873675615040, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.38448575
+      objectReference: {fileID: 0}
     - target: {fileID: 7293278140675626300, guid: 73334f58c682b46459e7a61219a4b1b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0

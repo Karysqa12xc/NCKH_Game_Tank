@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+//Mục tiêu lớp: thực hiện chức năng nạp đạn khi đạn bắn hết của người chơi
 public class ReloadAmmo : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI updateTextAmmo;

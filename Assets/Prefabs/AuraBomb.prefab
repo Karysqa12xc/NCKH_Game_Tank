@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1938849179312470976}
   - component: {fileID: 1938849179312470979}
-  - component: {fileID: 1938849179312470978}
   - component: {fileID: 3139894964867575893}
   - component: {fileID: 8032534404365224015}
+  - component: {fileID: 1142280049752192039}
   m_Layer: 0
   m_Name: AuraBomb
   m_TagString: Untagged
@@ -135,25 +135,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!114 &1938849179312470978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938849179312470989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a91582a8820114183f477bc8c33826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 50
-  maxRadius: 10
-  speed: 100
-  startWidth: 15
-  force: 1
-  bombAduioClip: {fileID: 8300000, guid: 9c92a5c7b579afe4ea11475dc4e3ee98, type: 3}
-  bombAduioSource: {fileID: 8032534404365224015}
 --- !u!65 &3139894964867575893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263,6 +244,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1142280049752192039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938849179312470989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33315019e685bd4c9d000a320a8d4fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsCount: 6
+  maxRadius: 15
+  speed: 150
+  startWidth: 5
+  force: 5
+  bombAduioClip: {fileID: 8300000, guid: 9c92a5c7b579afe4ea11475dc4e3ee98, type: 3}
+  bombAduioSource: {fileID: 8032534404365224015}
 --- !u!1001 &131063840510527810
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Không sử dụng
 public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemyBase;

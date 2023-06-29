@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 
 using UnityEngine.UI;
+//Không sử dụng
 public class levelLoader : MonoBehaviour
 {
     public static levelLoader Instance;
